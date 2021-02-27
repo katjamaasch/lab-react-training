@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.idCard {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: solid 2px black;
+}
+
+.imageIdCard {
+  padding: 1em 1em 0 0;
+}
+
+.greeting {
+  border: 2px solid black;
+  text-align: left;
+  padding: 0.5em;
+  margin: 1.5em 0.5em;
+}
+
+h1 {
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.colorBox {
+  border: 2px solid black;
+  padding: 0.5em;
+  margin: 1.5em 0.5em;
+  mix-blend-mode: difference
+}
