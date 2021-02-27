@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import IdCard from './Components/IdCard';
 import Greetings from './Components/Greetings';
 import RandomNumber from './Components/RandomNumber';
 import BoxColor from './Components/BoxColor';
 import CreditCard from './Components/CreditCard';
 import Rating from './Components/Rating';
+import DriverCard from './Components/DriverCard';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>IdCard</h1>
+      <h1 className="iterationTitle">IdCard</h1>
       <IdCard
         firstName="John"
         lastName="Doe"
@@ -28,16 +28,20 @@ function App() {
         birth={new Date(1988, 5, 11)}
         picture="https://source.unsplash.com/160x160/?dog"
       />
-      <h1>Greetings</h1>
+      <br></br>
+      <h1 className="iterationTitle">Greetings</h1>
       <Greetings lang="en">Ludwig</Greetings>
       <Greetings lang="fr">Francois</Greetings>
-      <h1>Random</h1>
+      <br></br>
+      <h1 className="iterationTitle">Random</h1>
       <RandomNumber number={5} />
       <RandomNumber number={100} />
-      <h1>BoxColor</h1>
+      <br></br>
+      <h1 className="iterationTitle">BoxColor</h1>
       <BoxColor r={255} g={0} b={0} />
       <BoxColor r={128} g={255} b={0} />
-      <h1>Credit Card</h1>
+      <br></br>
+      <h1 className="iterationTitle">Credit Card</h1>
       <div className="creditCardsDisplay">
         <CreditCard
           type="Visa"
@@ -70,13 +74,30 @@ function App() {
           color="#222222"
         />
       </div>
-      <h1>Rating</h1>
+      <br></br>
+      <h1 className="iterationTitle">Rating</h1>
       <Rating>0</Rating>
       <Rating>1.49</Rating>
       <Rating>1.5</Rating>
       <Rating>3</Rating>
       <Rating>4</Rating>
       <Rating>5</Rating>
+      <br></br>
+      <h1 className="iterationTitle">DriverCard</h1>
+      <DriverCard
+        name="Travis Kalanick"
+        rating={4.2}
+        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+        model="Toyota Corolla Altis"
+        licensePlate="CO42DE"
+      ></DriverCard>
+      <DriverCard
+        name="Dara Khosrowshahi"
+        rating={4.9}
+        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+        model="Audi A3"
+        licensePlate="BE33ER"
+      ></DriverCard>
     </div>
   );
 }
