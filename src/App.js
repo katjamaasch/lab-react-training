@@ -58,7 +58,18 @@ function App() {
           bgColor="#ddbb55"
           color="white"
         />
+        <CreditCard
+          type="Visa"
+          number="0123456789010995"
+          expirationMonth={7}
+          expirationYear={2022}
+          bank="Deutsche Bank"
+          owner="Dagobert Duck"
+          bgColor="#eeeeee"
+          color="#222222"
+        />
       </div>
+      <h1>Rating</h1>
     </div>
   );
 }

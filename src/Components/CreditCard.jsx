@@ -17,13 +17,15 @@ const CreditCard = ({
     imagePath = './img/master-card.svg';
   }
 
+  const security = number.replace(/.(?=.{4})/g, ' · ');
+
   return (
     <div
       className="creditCard"
       style={{ backgroundColor: bgColor, color: color }}
     >
       <img src={imagePath} alt="bank" height="20px"></img>
-      <h1>{number}</h1>
+      <h1>{security}</h1>
       <p>
         Expires {expirationMonth}/{expirationYear}    {bank}
       </p>
