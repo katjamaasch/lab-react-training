@@ -8,6 +8,7 @@ import Rating from './Components/Rating';
 import DriverCard from './Components/DriverCard';
 import LikeButton from './Components/LikeButton';
 import ClickablePicture from './Components/ClickablePicture';
+import Dice from './Components/Dice';
 import './App.css';
 
 function App() {
@@ -107,11 +108,13 @@ function App() {
         <LikeButton />
         <LikeButton />
       </div>
-      <h1>Clickable Picture</h1>
+      <h1 className="iterationTitle">Clickable Picture</h1>
       <ClickablePicture
         img="/img/persons/maxence.png"
         imgClicked="/img/persons/maxence-glasses.png"
       ></ClickablePicture>
+      <h1 className="iterationTitle">Dice</h1>
+      <Dice></Dice>
     </div>
   );
 }

@@ -133,3 +133,10 @@ p {
   margin-right: 20px;
   font-size: 30px;
 }
+
+.dice {
+  height: 100px;
+  display: block;
+  padding: 0.5em;
+  margin: 1.5em 0.5em;
+}
