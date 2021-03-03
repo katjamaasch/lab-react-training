@@ -6,6 +6,8 @@ import BoxColor from './Components/BoxColor';
 import CreditCard from './Components/CreditCard';
 import Rating from './Components/Rating';
 import DriverCard from './Components/DriverCard';
+import LikeButton from './Components/LikeButton';
+import ClickablePicture from './Components/ClickablePicture';
 import './App.css';
 
 function App() {
@@ -98,6 +100,18 @@ function App() {
         model="Audi A3"
         licensePlate="BE33ER"
       ></DriverCard>
+      <br></br>
+      <h1 className="iterationTitle">Like Button</h1>
+      <div className="likeButtons">
+        {' '}
+        <LikeButton />
+        <LikeButton />
+      </div>
+      <h1>Clickable Picture</h1>
+      <ClickablePicture
+        img="/img/persons/maxence.png"
+        imgClicked="/img/persons/maxence-glasses.png"
+      ></ClickablePicture>
     </div>
   );
 }
