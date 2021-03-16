@@ -1,3 +1,4 @@
+
 import React from 'react';
 class Dice extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ class Dice extends React.Component {
     });
   };
   rollTheDice = () => {
-    let diceNumber = Math.floor(Math.random() * 6 + 1).toString();
+    let diceNumber = Math.ceil(Math.random() * 6).toString();
     return `img/dice${diceNumber}.png`;
   };
   render() {

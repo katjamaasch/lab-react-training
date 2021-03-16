@@ -16,15 +16,12 @@ class ClickablePicture extends React.Component {
 
   render() {
     const { glasses } = this.state;
+    const { img, imgClicked } = this.props;
     return (
       <div>
         <img
-          src={
-            glasses
-              ? '/img/persons/maxence.png'
-              : '/img/persons/maxence-glasses.png'
-          }
-          alt=""
+          src={glasses ? `${img}` : `${imgClicked}`}
+          alt="to see or not to see"
           onClick={this.putGlassesOn}
         />
       </div>

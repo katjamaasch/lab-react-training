@@ -1,25 +1,27 @@
 import React from 'react';
-import { render } from 'react-dom';
 
 class LikeButton extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       number: 0,
     };
-    // const color=['purple','blue','green','yellow','orange','red'];
   }
   //changeColor = () => {}
 
-  incrementLike = () => {
+  handleIncrementLike = () => {
     this.setState({ number: this.state.number + 1 });
   };
   render() {
+    const color = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
     return (
       <div>
-        <button onClick={this.incrementLike}>
+        <button
+          style={{ backgroundColor: color[this.state.number % color.length] }}
+          onClick={this.handleIncrementLike}
+        >
           {' '}
-          {this.state.number} Likes{' '}
+          {this.state.number} Like{this.state.number !== 1 && 's'}{' '}
         </button>
       </div>
     );
