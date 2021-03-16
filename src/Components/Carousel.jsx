@@ -5,7 +5,7 @@ class Carousel extends React.Component {
   state = {
     number: 0,
   };
-  
+
   nextInLine = () => {
     if (this.state.number < this.props.imgs.length - 1) {
       this.setState({
@@ -31,7 +31,6 @@ class Carousel extends React.Component {
   };
 
   render() {
-    console.log(this.props.imgs);
     return (
       <div>
         <img src={this.props.imgs[this.state.number]} alt="Carousel Images" />
