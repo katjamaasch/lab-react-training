@@ -12,6 +12,7 @@ import Dice from './Components/Dice';
 import Carousel from './Components/Carousel';
 import Facebook from './Components/Facebook';
 import './App.css';
+import NumbersTable from './Components/NumbersTable';
 
 function App() {
   return (
@@ -126,6 +127,8 @@ function App() {
           'https://randomuser.me/api/portraits/men/2.jpg',
         ]}
       ></Carousel>
+      <h1 className="iterationTitle">Numbers Table</h1>
+      <NumbersTable limit={12}></NumbersTable>
       <h1 className="iterationTitle">Facebook</h1>
       <Facebook></Facebook>
     </div>
