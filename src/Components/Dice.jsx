@@ -1,32 +1,31 @@
-
 import React from 'react';
 class Dice extends React.Component {
   constructor() {
     super();
     this.state = {
-      empty: true,
-      image: '',
+      image: `img/dice-empty.png`,
     };
   }
-  clickTheDice = () => {
-    const image = this.rollTheDice();
-    this.setState({
-      empty: !this.state.empty,
-      image: image,
-    });
-  };
   rollTheDice = () => {
-    let diceNumber = Math.ceil(Math.random() * 6).toString();
-    return `img/dice${diceNumber}.png`;
+    this.setState({
+      image: `img/dice-empty.png`,
+    });
+    setTimeout(() => {
+      let diceNumber = Math.ceil(Math.random() * 6).toString();
+      this.setState({
+        image: `img/dice${diceNumber}.png`,
+      });
+    }, 1000);
   };
+
   render() {
     return (
       <div>
         <img
           className="dice"
-          src={this.state.empty ? '/img/dice-empty.png' : this.state.image}
+          src={this.state.image}
           alt=""
-          onClick={this.clickTheDice}
+          onClick={this.rollTheDice}
         />
       </div>
     );

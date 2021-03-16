@@ -24,7 +24,7 @@ function App() {
         gender="male"
         height={178}
         birth={new Date(1992, 7, 14)}
-        picture="https://source.unsplash.com/160x160/?boy"
+        picture="https://source.unsplash.com/160x160/?man"
       />
       <IdCard
         firstName="Obrien"
@@ -32,7 +32,7 @@ function App() {
         gender="female"
         height={172}
         birth={new Date(1988, 5, 11)}
-        picture="https://source.unsplash.com/160x160/?girl"
+        picture="https://source.unsplash.com/160x160/?woman"
       />
       <br></br>
       <h1 className="iterationTitle">Greetings</h1>

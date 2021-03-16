@@ -14,35 +14,36 @@ class Facebook extends Component {
   };
 
   render() {
+    const { selectedCountry, profiles } = this.state;
     const countries = [];
-    for (let profile of this.state.profiles) {
-      const country = profile.country;
-      if (!countries.includes(country)) {
-        countries.push(country);
+    for (let profile of profiles) {
+      //  const country = profile.country;
+      if (!countries.includes(profile.country)) {
+        countries.push(profile.country);
       }
     }
 
     return (
       <div>
-        <button>All</button>
+        <button onClick={() => this.handleHighlightedCountry(null)}>All</button>
         {countries.map((country) => (
           <button
             onClick={() => this.handleHighlightedCountry(country)}
             style={{
-              backgroundColor:
-                country === this.state.selectedCountry && 'lightblue',
+              backgroundColor: country === selectedCountry && 'lightblue',
             }}
           >
             {country}
           </button>
         ))}
+        <p></p>
         {this.state.profiles.map((profile) => (
           <div
             key={profile.img}
             className="facebookCard"
             style={{
               backgroundColor:
-                profile.country === this.state.selectedCountry && 'lightblue',
+                profile.country === selectedCountry && 'lightblue',
             }}
           >
             <div>
