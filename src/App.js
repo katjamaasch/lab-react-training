@@ -13,6 +13,7 @@ import Carousel from './Components/Carousel';
 import Facebook from './Components/Facebook';
 import './App.css';
 import NumbersTable from './Components/NumbersTable';
+import SignUpPage from './Components/SignUp_Page';
 
 function App() {
   return (
@@ -131,6 +132,8 @@ function App() {
       <NumbersTable limit={12}></NumbersTable>
       <h1 className="iterationTitle">Facebook</h1>
       <Facebook></Facebook>
+      <h1 className="iterationTitle">Sign Up Page</h1>
+      <SignUpPage></SignUpPage>
     </div>
   );
 }

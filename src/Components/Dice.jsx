@@ -6,7 +6,19 @@ class Dice extends React.Component {
       image: `img/dice-empty.png`,
     };
   }
+/*   clickTheDice = () => {
+    const foo = this.rollTheDice();
+    this.setState({
+      empty: !this.state.empty,
+      image: foo,
+    });
+  };
   rollTheDice = () => {
+    let diceNumber = Math.ceil(Math.random() * 6).toString();
+    return `img/dice${diceNumber}.png`;
+  }; */
+
+    clickTheDice = () => {
     this.setState({
       image: `img/dice-empty.png`,
     });
@@ -25,7 +37,7 @@ class Dice extends React.Component {
           className="dice"
           src={this.state.image}
           alt=""
-          onClick={this.rollTheDice}
+          onClick={this.clickTheDice}
         />
       </div>
     );
